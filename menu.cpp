@@ -233,9 +233,8 @@ void f054()
 }
 void f055()
 {
-	int age
-			cout
-		<< "請輸入年齡" << endl;
+	int age;
+	cout<< "請輸入年齡" << endl;
 	cin >> age;
 	if(age<18)
 		cout<<"沒有投票權"<<endl;
