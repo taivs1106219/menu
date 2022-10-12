@@ -13,6 +13,9 @@ void f04();
 void f05();
 void f051();
 void f052();
+void f053();
+void f054();
+void f055();
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char **argv)
@@ -67,9 +70,9 @@ int main(int argc, char **argv)
 		}
 
 		cout << "\n";
-//		system("pause");
-//		return 0;
-		selMenu=99;
+		//		system("pause");
+		//		return 0;
+		selMenu = 99;
 	}
 }
 void f01()
@@ -127,11 +130,11 @@ void f05()
 	string menuItem[] = {
 		"[51] 關聯運算子",
 		"[52] 邏輯運算子",
-		"[53]",
-		"[54]",
-		"[55]",
-		"[56]",
-		"[57]",
+		"[53] 學費",
+		"[54] 今年是不是閏年呢~",
+		"[55] 投票權",
+		"[56] HW 221012：",
+		"[57] HW 221012：",
 		"[58]",
 		"[59]"};
 	int i, num;
@@ -154,31 +157,92 @@ void f05()
 		case 51:
 			f051();
 			break;
-			
+
 		case 52:
 			f052();
 			break;
+		case 53:
+			f053();
+			break;
+		case 54:
+			f054();
+			break;
+		case 55:
+			f055();
+			break;
 		}
-		cout << "\n";
-		selMenu=0;
+
+		cout
+			<< "\n";
+		selMenu = 0;
 	}
 }
 void f051()
 {
 	cout << boolalpha;
-//	cout<<"65='A' 運算結果 ="<<(65=="A")<<endl;
-	cout<<"-0.18>0 運算結果 ="<<(-0.18>0)<<endl;
-	cout<<"5*6<=10*3 運算結果 ="<<(5*6<=10*3)<<endl;
-	cout<<noboolalpha<<endl;
+	//	cout<<"65='A' 運算結果 ="<<(65=="A")<<endl;
+	cout << "-0.18>0 運算結果 =" << (-0.18 > 0) << endl;
+	cout << "5*6<=10*3 運算結果 =" << (5 * 6 <= 10 * 3) << endl;
+	cout << noboolalpha << endl;
 	system("pause");
 }
-void f052(){
+void f052()
+{
 	int score;
-	cout<<"請輸入測驗成績";
-	cin>>score;
-	cout<<"成績不合理 = "<<((score<0)||(score>100)) <<endl;
-	cout<<"成績及格 = "<<((score>=60)||(score<=100)) <<endl;
-	cout<<"有一次補考機會 = "<<((score>=50)&&(score<60))<<endl;
-	cout<<"成績不及格 = "<<((score>=0)&&(score<50))<<endl;
+	cout << "請輸入測驗成績";
+	cin >> score;
+	cout << "成績不合理 = " << ((score < 0) || (score > 100)) << endl;
+	cout << "成績及格 = " << ((score >= 60) || (score <= 100)) << endl;
+	cout << "有一次補考機會 = " << ((score >= 50) && (score < 60)) << endl;
+	cout << "成績不及格 = " << ((score >= 0) && (score < 50)) << endl;
+	system("pause");
+}
+void f053()
+{
+	int price;
+	cout << "請輸入收入" << endl;
+	cin >> price;
+	if (price >= 1480000)
+		cout << "需繳納學費" << endl;
+	else
+		cout << "免繳納學費" << endl;
+	system("pause");
+}
+void f054()
+{
+	int year;
+	cout << "請輸入西元年" << endl;
+	cin >> year;
+	if ((year % 4) == 0)
+		if ((year % 400) == 0)
+			cout << year << "是閏年哦" << endl;
+		else
+		{
+			if ((year % 100) == 0)
+				cout << year << "不是閏年哦" << endl;
+			else
+			{
+				cout << year << "是閏年哦" << endl;
+			}
+		}
+	else
+	{
+		cout << year << "不是閏年哦" << endl;
+	}
+	system("pause");
+}
+void f055()
+{
+	int age
+			cout
+		<< "請輸入年齡" << endl;
+	cin >> age;
+	if(age<18)
+		cout<<"沒有投票權"<<endl;
+	else if(age<20)
+		cout<<"只能投公投"<<endl;
+	else{
+		cout<<"領取公投票以及公職人員票"<<endl;
+	}
 	system("pause");
 }
