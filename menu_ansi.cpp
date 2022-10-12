@@ -18,11 +18,11 @@ void f052();
 int main(int argc, char **argv)
 {
 	string menuItem[] = {
-		"[0] Â÷¶}",
-		"[1] ¤T¼Æ¥­§¡",
+		"[0] ï¿½ï¿½ï¿½}",
+		"[1] ï¿½Tï¿½Æ¥ï¿½ï¿½ï¿½",
 		"[2] P75Q3",
-		"[3]HW:20221005 ¨ú­Ó¦ì¼Æ",
-		"[4]HW:221005 ºâ¤g²£",
+		"[3]HW:20221005 ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½",
+		"[4]HW:221005 ï¿½ï¿½gï¿½ï¿½",
 		"[5]",
 		"[6]",
 		"[7]",
@@ -34,14 +34,14 @@ int main(int argc, char **argv)
 	{
 		system("chcp 950");
 		system("cls");
-		cout << "¸ê°T¤@¤A 19 ±Z®¦©_\n";
+		cout << "ï¿½ï¿½Tï¿½@ï¿½A 19 ï¿½Zï¿½ï¿½ï¿½_\n";
 		cout << "-----------------------------" << endl;
 		int arrLength = sizeof(menuItem) / sizeof(menuItem[1]);
 		for (i = 0; i < arrLength; i++)
 		{
 			cout << menuItem[i] << endl;
 		}
-		cout << "½Ð¿é¤J¡G";
+		cout << "ï¿½Ð¿ï¿½Jï¿½G";
 		cin >> selMenu;
 		switch (selMenu)
 		{
@@ -67,18 +67,18 @@ int main(int argc, char **argv)
 		}
 
 		cout << "\n";
-//		system("pause");
-//		return 0;
-		selMenu=99;
+		//		system("pause");
+		//		return 0;
+		selMenu = 99;
 	}
 }
 void f01()
 {
 	int chi, eng, math;
 
-	cout << "½Ð¿é¤J°ê¤å¡B­^¤å©M¼Æ¾Ç¤T¬ì¤À¼Æ¡]¾ã¼Æ¡^" << endl;
+	cout << "ï¿½Ð¿ï¿½Jï¿½ï¿½ï¿½Bï¿½^ï¿½ï¿½Mï¿½Æ¾Ç¤Tï¿½ï¿½ï¿½ï¿½Æ¡]ï¿½ï¿½Æ¡^" << endl;
 	cin >> chi >> eng >> math;
-	cout << "°ê¤å\t­^¤å\t¼Æ¾Ç\t¥­§¡\n";
+	cout << "ï¿½ï¿½ï¿½\tï¿½^ï¿½ï¿½\tï¿½Æ¾ï¿½\tï¿½ï¿½ï¿½ï¿½\n";
 	cout << chi << "\t" << eng << "\t" << math << "\t" << (float)(chi + eng + math) / 3;
 	system("pause");
 }
@@ -102,10 +102,10 @@ void f03()
 {
 	unsigned int num;
 	unsigned int digits;
-	cout << "¿é¤J¥¿¾ã¼Æ¡G";
+	cout << "ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½Æ¡G";
 	cin >> num;
 	digits = num % 10;
-	cout << num << "ªº­Ó¦ì¼Æ¬O" << digits << endl;
+	cout << num << "ï¿½ï¿½ï¿½Ó¦ï¿½Æ¬O" << digits << endl;
 	system("pause");
 }
 void f04()
@@ -114,19 +114,19 @@ void f04()
 	int people;
 	int boxes;
 	int singles;
-	cout << "½Ð¿é¤J¯Z¯Å¤H¼Æ";
+	cout << "ï¿½Ð¿ï¿½Jï¿½Zï¿½Å¤Hï¿½ï¿½";
 	cin >> people;
 	boxes = people / 8;
 	singles = people - (8 * boxes);
-	cout << "¶R" << boxes << "²°¡A³æ¶R" << singles << "­Ó" << endl;
-	cout << "¦@­p" << (boxes * 12) + (singles * 2) << "¤¸" << endl;
+	cout << "ï¿½R" << boxes << "ï¿½ï¿½ï¿½Aï¿½ï¿½R" << singles << "ï¿½ï¿½" << endl;
+	cout << "ï¿½@ï¿½p" << (boxes * 12) + (singles * 2) << "ï¿½ï¿½" << endl;
 	system("pause");
 }
 void f05()
 {
 	string menuItem[] = {
-		"[51] ÃöÁp¹Bºâ¤l",
-		"[52] ÅÞ¿è¹Bºâ¤l",
+		"[51] ï¿½ï¿½ï¿½pï¿½Bï¿½ï¿½l",
+		"[52] ï¿½Þ¿ï¿½Bï¿½ï¿½l",
 		"[53]",
 		"[54]",
 		"[55]",
@@ -140,45 +140,46 @@ void f05()
 	{
 		// system("chcp 950");
 		system("cls");
-		cout << "¸ê°T¤@¤A 19 ±Z®¦©_\n";
+		cout << "ï¿½ï¿½Tï¿½@ï¿½A 19 ï¿½Zï¿½ï¿½ï¿½_\n";
 		cout << "-----------------------------" << endl;
 		int arrLength = sizeof(menuItem) / sizeof(menuItem[1]);
 		for (i = 0; i < arrLength; i++)
 		{
 			cout << menuItem[i] << endl;
 		}
-		cout << "½Ð¿é¤J¡G";
+		cout << "ï¿½Ð¿ï¿½Jï¿½G";
 		cin >> selMenu;
 		switch (selMenu)
 		{
 		case 51:
 			f051();
 			break;
-			
+
 		case 52:
 			f052();
 			break;
 		}
 		cout << "\n";
-		selMenu=0;
+		selMenu = 0;
 	}
 }
 void f051()
 {
 	cout << boolalpha;
-//	cout<<"65='A' ¹Bºâµ²ªG ="<<(65=="A")<<endl;
-	cout<<"-0.18>0 ¹Bºâµ²ªG ="<<(-0.18>0)<<endl;
-	cout<<"5*6<=10*3 ¹Bºâµ²ªG ="<<(5*6<=10*3)<<endl;
-	cout<<noboolalpha<<endl;
+	//	cout<<"65='A' ï¿½Bï¿½âµ²ï¿½G ="<<(65=="A")<<endl;
+	cout << "-0.18>0 ï¿½Bï¿½âµ²ï¿½G =" << (-0.18 > 0) << endl;
+	cout << "5*6<=10*3 ï¿½Bï¿½âµ²ï¿½G =" << (5 * 6 <= 10 * 3) << endl;
+	cout << noboolalpha << endl;
 	system("pause");
 }
-void f052(){
+void f052()
+{
 	int score;
-	cout<<"½Ð¿é¤J´úÅç¦¨ÁZ";
-	cin>>score;
-	cout<<"¦¨ÁZ¤£¦X²z = "<<((score<0)||(score>100)) <<endl;
-	cout<<"¦¨ÁZ¤Î®æ = "<<((score>=60)||(score<=100)) <<endl;
-	cout<<"¦³¤@¦¸¸É¦Ò¾÷·| = "<<((score>=50)&&(score<60))<<endl;
-	cout<<"¦¨ÁZ¤£¤Î®æ = "<<((score>=0)&&(score<50))<<endl;
+	cout << "ï¿½Ð¿ï¿½Jï¿½ï¿½ï¿½ç¦¨ï¿½Z";
+	cin >> score;
+	cout << "ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Xï¿½z = " << ((score < 0) || (score > 100)) << endl;
+	cout << "ï¿½ï¿½ï¿½Zï¿½Î®ï¿½ = " << ((score >= 60) || (score <= 100)) << endl;
+	cout << "ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½É¦Ò¾ï¿½ï¿½| = " << ((score >= 50) && (score < 60)) << endl;
+	cout << "ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Î®ï¿½ = " << ((score >= 0) && (score < 50)) << endl;
 	system("pause");
 }

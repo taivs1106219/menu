@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	int selMenu = 99;
 	while (selMenu != 0)
 	{
-		system("chcp 950");
+		system("chcp 65001");
 		system("cls");
 		cout << "資訊一乙 19 崔恩奇\n";
 		cout << "-----------------------------" << endl;
