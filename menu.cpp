@@ -16,6 +16,8 @@ void f052();
 void f053();
 void f054();
 void f055();
+void f056();
+void f057();
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char **argv)
@@ -133,8 +135,8 @@ void f05()
 		"[53] 學費",
 		"[54] 今年是不是閏年呢~",
 		"[55] 投票權",
-		"[56] HW 221012：",
-		"[57] HW 221012：",
+		"[56] HW 221012：PH值",
+		"[57] HW 221012：BMI",
 		"[58]",
 		"[59]"};
 	int i, num;
@@ -169,6 +171,13 @@ void f05()
 			break;
 		case 55:
 			f055();
+			break;
+
+		case 56:
+			f056();
+			break;
+		case 57:
+			f057();
 			break;
 		}
 
@@ -234,14 +243,58 @@ void f054()
 void f055()
 {
 	int age;
-	cout<< "請輸入年齡" << endl;
+	cout << "請輸入年齡" << endl;
 	cin >> age;
-	if(age<18)
-		cout<<"沒有投票權"<<endl;
-	else if(age<20)
-		cout<<"只能投公投"<<endl;
-	else{
-		cout<<"領取公投票以及公職人員票"<<endl;
+	if (age < 18)
+		cout << "沒有投票權" << endl;
+	else if (age < 20)
+		cout << "只能投公投" << endl;
+	else
+	{
+		cout << "領取公投票以及公職人員票" << endl;
 	}
+	system("pause");
+}
+void f056()
+{
+	float ph;
+	cout << "請輸入pH值" << endl;
+	cin >> ph;
+	if (ph <= 8.5 && ph >= 6.0)
+	{
+		cout << "水質正常" << endl;
+	}
+	else
+	{
+		cout << "水質異常" << endl;
+	}
+	system("pause");
+}
+void f057()
+{
+	float bmi;
+	cout << "請輸入BMI值" << endl;
+	cin >> bmi;
+	if (bmi >= 18.5 && bmi < 24.0)
+	{
+		cout << "體重過輕" << endl;
+	}
+	else if (bmi >= 24.0 && bmi < 27.0)
+	{
+		cout << "體重過輕" << endl;
+	}
+	else if (bmi >= 27.0 && bmi < 30.0)
+	{
+		cout << "輕度肥胖" << endl;
+	}
+	else if (bmi >= 30.0 && bmi < 32.0)
+	{
+		cout << "中度肥胖" << endl;
+	}
+	else if (bmi >= 35.0)
+	{
+		cout << "重度肥胖" << endl;
+	}
+
 	system("pause");
 }
