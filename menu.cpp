@@ -6,6 +6,7 @@
 #include <ctime>
 #include <conio.h>
 using namespace std;
+void f000();
 void f01();
 void f02();
 void f03();
@@ -18,6 +19,13 @@ void f054();
 void f055();
 void f056();
 void f057();
+void f058();
+void f059();
+void f0510();
+void f06();
+void f061();
+void f062();
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char **argv)
@@ -28,8 +36,8 @@ int main(int argc, char **argv)
 		"[2] P75Q3",
 		"[3]HW:20221005 取個位數",
 		"[4]HW:221005 算土產",
-		"[5]",
-		"[6]",
+		"[5] 流程指令",
+		"[6] 迴圈指令",
 		"[7]",
 		"[8]",
 		"[9]"};
@@ -68,6 +76,9 @@ int main(int argc, char **argv)
 			break;
 		case 5:
 			f05();
+			break;
+		case 6:
+			f06();
 			break;
 		}
 
@@ -137,8 +148,9 @@ void f05()
 		"[55] 投票權",
 		"[56] HW 221012：PH值",
 		"[57] HW 221012：BMI",
-		"[58]",
-		"[59]"};
+		"[58] switch",
+		"[59] ",
+		"[510] HW"};
 	int i, num;
 	int selMenu = 99;
 	while (selMenu != 0)
@@ -179,10 +191,18 @@ void f05()
 		case 57:
 			f057();
 			break;
+		case 58:
+			f058();
+			break;
+		case 59:
+			f059();
+			break;
+		case 510:
+			f0510();
+			break;
 		}
 
-		cout
-			<< "\n";
+		cout << "\n";
 		selMenu = 0;
 	}
 }
@@ -296,5 +316,151 @@ void f057()
 		cout << "重度肥胖" << endl;
 	}
 
+	system("pause");
+}
+void f058()
+{
+	// int x;
+	// cin >> x;
+	// switch (x % 2)
+	// {
+	// case 0:
+	// 	cout << "偶數" << endl;
+	// 	break;
+
+	// case 1:
+	// 	cout << "奇數" << endl;
+	// 	break;
+	// }
+	// system("pause");
+	int opt;
+	cout << "=====MENU=====" << endl;
+	cout << "[1] 開新檔案" << endl;
+	cout << "[2] 開啓舊檔" << endl;
+	cout << "[3] 結束程式" << endl;
+	cout << "==============" << endl;
+	cout << "請輸入選項：";
+	cin >> opt;
+	switch (opt)
+	{
+	case 1:
+		cout << "開新檔案" << endl;
+		break;
+	case 2:
+		cout << "開啓舊檔" << endl;
+		break;
+	case 3:
+		cout << "結束程式" << endl;
+		break;
+	default:
+		cout << "沒有這個選項呢" << endl;
+		break;
+	}
+	system("pause");
+}
+void f059()
+{
+	int day;
+	cin >> day;
+	switch (day)
+	{
+	case 6:
+	case 7:
+		cout << "放假了hh" << endl;
+		break;
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		cout << "RRR不想上學" << endl;
+		break;
+	default:
+		cout << "敲錯了啦笨蛋！" << endl;
+	}
+
+	system("pause");
+}
+void f0510()
+{
+}
+void f06()
+{
+	string menuItem[] = {
+		"[61] 1+3+5...+19",
+		"[62] HW221019-02",
+		"[63] ",
+		"[64] ",
+		"[65] ",
+		"[66] ",
+		"[67] ",
+		"[68] ",
+		"[69] "};
+	int i, num;
+	int selMenu = 99;
+	while (selMenu != 0)
+	{
+		// system("chcp 950");
+		system("cls");
+		cout << "資訊一乙 19 崔恩奇\n";
+		cout << "-----------------------------" << endl;
+		int arrLength = sizeof(menuItem) / sizeof(menuItem[1]);
+		for (i = 0; i < arrLength; i++)
+		{
+			cout << menuItem[i] << endl;
+		}
+		cout << "請輸入：";
+		cin >> selMenu;
+		switch (selMenu)
+		{
+		case 0:
+			f000();
+			break;
+		case 61:
+			f061();
+			break;
+		case 62:
+			f062();
+			break;
+		}
+
+		cout << "\n";
+		selMenu = 0;
+	}
+}
+void f000()
+{
+	cout << "叮~恭喜你觸發了彩蛋" << endl;
+	system("pause");
+}
+void f061()
+{
+	int i, j;
+	j = 0;
+	for (i = 1; i <= 19; i += 2)
+	{
+		j += i;
+	}
+	// {
+	// 	for (j = 1; j < i; j++)
+	// 	{
+	// 		cout << "*";
+	// 	}
+	// 	cout << endl;
+	// }
+
+	cout << j << endl;
+
+	system("pause");
+}
+void f062()
+{
+
+	int i = 1;
+	while (i >= 1 && i <= 9)
+	{
+		cout << i << endl;
+		i++;
+	}
 	system("pause");
 }
