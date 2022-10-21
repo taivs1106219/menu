@@ -301,7 +301,7 @@ void f057()
 	}
 	else if (bmi >= 24.0 && bmi < 27.0)
 	{
-		cout << "體重過輕" << endl;
+		cout << "體重過重" << endl;
 	}
 	else if (bmi >= 27.0 && bmi < 30.0)
 	{
