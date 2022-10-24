@@ -25,6 +25,8 @@ void f0510();
 void f06();
 void f061();
 void f062();
+void f063();
+void f064();
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -388,9 +390,9 @@ void f06()
 {
 	string menuItem[] = {
 		"[61] 1+3+5...+19",
-		"[62] HW221019-02",
-		"[63] ",
-		"[64] ",
+		"[62] HW221019 CH5-3",
+		"[63] HW221019 CH6-5 for ",
+		"[64] HW221019 CH6-5 while",
 		"[65] ",
 		"[66] ",
 		"[67] ",
@@ -421,6 +423,12 @@ void f06()
 			break;
 		case 62:
 			f062();
+			break;
+		case 63:
+			f063();
+			break;
+		case 64:
+			f064();
 			break;
 		}
 
@@ -456,10 +464,58 @@ void f061()
 void f062()
 {
 
-	int i = 1;
-	while (i >= 1 && i <= 9)
+	int day;
+	cin >> day;
+	switch (day)
 	{
-		cout << i << endl;
+	case 1:
+		cout << "星期一" << endl;
+		break;
+	case 2:
+		cout << "星期二" << endl;
+		break;
+	case 3:
+		cout << "星期三" << endl;
+		break;
+	case 4:
+		cout << "星期四" << endl;
+		break;
+	case 5:
+		cout << "星期五" << endl;
+		break;
+	case 6:
+		cout << "星期六" << endl;
+		break;
+	case 7:
+		cout << "星期日" << endl;
+		break;
+
+	default:
+		cout << "輸入錯誤！" << endl;
+		break;
+	}
+	system("pause");
+}
+void f063()
+{
+	for (int i = 1; i <= 100; i++)
+	{
+		if ((i % 2) && (i % 3) && (i % 5) && (i % 7))
+		{
+			cout << i << endl;
+		}
+	}
+	system("pause");
+}
+void f064()
+{
+	int i=1;
+	while (i <= 100)
+	{
+		if ((i % 2) && (i % 3) && (i % 5) && (i % 7))
+		{
+			cout << i << endl;
+		}
 		i++;
 	}
 	system("pause");
