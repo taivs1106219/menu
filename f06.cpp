@@ -7,7 +7,9 @@ void f061();
 void f062();
 void f063();
 void f064();
-
+void f065();
+void f066();
+void f067();
 void f06()
 {
     string menuItem[] = {
@@ -15,9 +17,9 @@ void f06()
         "[62] HW221019 CH5-3",
         "[63] HW221019 CH6-5 for ",
         "[64] HW221019 CH6-5 while",
-        "[65] ",
-        "[66] ",
-        "[67] ",
+        "[65] 九九乘法表",
+        "[66] 九九乘法表2",
+        "[67] HW:公因數與公倍數",
         "[68] ",
         "[69] "};
     int i, num;
@@ -52,6 +54,15 @@ void f06()
         case 64:
             f064();
             break;
+        case 65:
+            f065();
+            break;
+        case 66:
+            f066();
+            break;
+        case 67:
+            f067();
+            break;
         }
 
         cout << "\n";
@@ -83,15 +94,49 @@ void f061()
 
     // system("pause");
 
-    int i = 1, sum = 0;
+    int a = 1, sum1 = 0;
     do
     {
-        sum += i;
-        i++;
-    } while (i <= 10);
+        cout << a;
+        if (a == 10)
+        {
+            cout << "+";
+        }
+        else
+        {
+            cout << "=";
+        }
+        sum1 += a;
+        a++;
+    } while (a <= 10);
+    cout << "sum1=" << sum1 << endl;
 
-    cout << "sum=" << sum << endl;
-
+    int b = 1, sum2 = 0;
+    do
+    {
+        cout << b;
+        if (b == 9)
+        {
+            cout << "=";
+        }
+        else
+        {
+            cout << "+";
+        }
+        sum2 += b;
+        b += 2;
+    } while (b <= 10);
+    cout << sum2 << endl;
+    cout << "印出1~10非5整除的數字" << endl;
+    for (int c = 1; c <= 10; c++)
+    {
+        if (c % 5 == 0)
+        {
+            continue;
+        }
+        cout << c << ",";
+    }
+    cout << endl;
     system("pause");
 }
 void f062()
@@ -151,5 +196,70 @@ void f064()
         }
         i++;
     }
+    system("pause");
+}
+void f065()
+{
+
+    cout << "    |\t1 \t2 \t3 \t4 \t5 \t6 \t7 \t8 \t9 \n";
+    for (int i = 1; i <= 80; i++)
+    {
+        cout << "-";
+    }
+    cout << "\n";
+    for (int x = 1; x <= 9; x++)
+    {
+        cout << x << "   |\t";
+        int y = 1;
+        while (y <= 9)
+        {
+            cout << x * y << "\t";
+            y++;
+        };
+        cout << "\n";
+    }
+    cout << "\n";
+
+    system("pause");
+}
+void f066()
+{
+    for (int x = 1; x <= 9; x++)
+    {
+
+        for (int y = 1; y <= 9; y++)
+        {
+            cout << x << "*" << y << "=" << setw(2) << x * y << "\t";
+        }
+        cout << "\n";
+    }
+    system("pause");
+}
+void f067()
+{
+    int a, b;
+    cin >> a >> b;
+    int num1 = a;
+    int num2 = b;
+    while (a && b)
+    {
+        if (a > b)
+        {
+            a = a % b;
+        }
+        else if (b > a)
+        {
+            b = b % a;
+        }
+    }
+    if (a >= b)
+    {
+        cout << num1 << "," << num2 << "的最大公因數：" << a << endl;
+    }
+    else if (b > a)
+    {
+        cout << num1 << "," << num2 << "的最大公因數：" << b << endl;
+    }
+
     system("pause");
 }
