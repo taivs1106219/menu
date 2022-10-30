@@ -237,6 +237,7 @@ void f066()
 }
 void f067()
 {
+    int gdc;
     int a, b;
     cin >> a >> b;
     int num1 = a;
@@ -255,11 +256,14 @@ void f067()
     if (a >= b)
     {
         cout << num1 << "," << num2 << "的最大公因數：" << a << endl;
+        gdc=a;
     }
     else if (b > a)
     {
-        cout << num1 << "," << num2 << "的最大公因數：" << b << endl;
+        cout << num1 << ", " << num2 << "的最大公因數：" << b << endl;
+        gdc=b;
     }
+    cout << num1 << ", " << num2 << "的最小公倍數：" << (num1 * num2) / gdc << endl;
 
     system("pause");
 }

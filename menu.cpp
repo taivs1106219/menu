@@ -1,3 +1,5 @@
+#define ； ;
+#define ， ,
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
