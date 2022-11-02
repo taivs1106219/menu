@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 void f000();
@@ -10,6 +11,7 @@ void f064();
 void f065();
 void f066();
 void f067();
+void f069();
 void f06()
 {
     string menuItem[] = {
@@ -62,6 +64,9 @@ void f06()
             break;
         case 67:
             f067();
+            break;
+        case 69:
+            f069();
             break;
         }
 
@@ -237,7 +242,6 @@ void f066()
 }
 void f067()
 {
-    int gdc;
     int a, b;
     cin >> a >> b;
     int num1 = a;
@@ -256,14 +260,25 @@ void f067()
     if (a >= b)
     {
         cout << num1 << "," << num2 << "的最大公因數：" << a << endl;
-        gdc=a;
     }
     else if (b > a)
     {
-        cout << num1 << ", " << num2 << "的最大公因數：" << b << endl;
-        gdc=b;
+        cout << num1 << "," << num2 << "的最大公因數：" << b << endl;
     }
-    cout << num1 << ", " << num2 << "的最小公倍數：" << (num1 * num2) / gdc << endl;
 
+    system("pause");
+}
+void f069()
+{
+    int i = 0;
+    int ans;
+    srand(time(NULL));
+    do
+    {
+        ans = rand() % 100 + 1;
+        cout << ans << " ";
+        i++;
+    } while (i < 5);
+    cout << endl;
     system("pause");
 }

@@ -7,7 +7,10 @@
 #include <fstream>
 #include <ctime>
 #include <conio.h>
+#include <ctime>
+#include <cstdlib>
 #include "f06.cpp"
+#include "f07.cpp"
 using namespace std;
 void f000();
 void f01();
@@ -84,6 +87,9 @@ int main(int argc, char **argv)
 			break;
 		case 6:
 			f06();
+			break;
+		case 7:
+			f07();
 			break;
 		}
 
