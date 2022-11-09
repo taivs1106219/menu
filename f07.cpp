@@ -8,6 +8,9 @@ void f072();
 void f073();
 void f074();
 void f075();
+void f076();
+void f078();
+void f079();
 void f07()
 {
     string menuItem[] = {
@@ -16,10 +19,10 @@ void f07()
         "[73] 星座",
         "[74] 打印樹枝",
         "[75] ",
-        "[76] ",
+        "[76] 小學堂四則運算版",
         "[77] ",
-        "[78] ",
-        "[79] "};
+        "[78] 221109 考題1",
+        "[79] 221109 考題2"};
     int i, num;
     int selMenu = 99;
     while (selMenu != 0)
@@ -54,6 +57,15 @@ void f07()
             break;
         case 75:
             f075();
+            break;
+        case 76:
+            f076();
+            break;
+        case 78:
+            f078();
+            break;
+        case 79:
+            f079();
             break;
         }
 
@@ -330,5 +342,131 @@ void f075()
         num = num / 10;
     }
     cout << endl;
+    system("pause");
+}
+
+void f076()
+{
+    clock_t a, b;
+    int i;
+    float spend;
+    a = clock();
+    // start timing
+
+    int tmp, sum, ans, x, y, op;
+    int win = 0;
+    int n = 1;
+
+    srand(time(NULL));
+    cout << "小學堂大考驗\n";
+    while (n < 5)
+    {
+        x = rand() % 10 + 1;
+        y = rand() % 10 + 1;
+        // op = rand() % 2;
+        if (y > x)
+        {
+            tmp = x;
+            x = y;
+            y = tmp;
+        }
+        // if (n == 4)
+        // {
+        //     do
+        //     {
+        //         x = rand() % 10 + 1;
+        //         y = rand() % 10 + 1;
+        //         // op = rand() % 2;
+        //         if (y > x)
+        //         {
+        //             tmp = x;
+        //             x = y;
+        //             y = tmp;
+        //         }
+        //     } while (x % y);
+        // }
+        switch (n)
+        {
+        case 1:
+            sum = x + y;
+            cout << "第" << n << "題：" << x << "+" << y << "=?\n";
+            break;
+
+        case 2:
+            sum = x - y;
+            cout << "第" << n << "題：" << x << "-" << y << "=?\n";
+            break;
+        case 3:
+            sum = x * y;
+            cout << "第" << n << "題：" << x << "*" << y << "=?\n";
+            break;
+        case 4:
+            sum = x / y;
+            cout << "第" << n << "題：" << x << "/" << y << "=?\n";
+            break;
+        }
+        cin >> ans;
+        if (sum == ans)
+        {
+            cout << "答對了~\n";
+            win++;
+        }
+        else
+        {
+            cout << "答錯了\n";
+        }
+        n++;
+    }
+    cout << "得分：" << win * 25 << endl;
+    // end timming
+    b = clock();
+    spend = (double)(b - a) / CLK_TCK;
+    cout.precision(3);
+    cout << "Time Spent: " << spend << "s" << endl;
+
+    system("pause");
+}
+void f078()
+{
+    int chinese, english, math, social, science, sum;
+    float avg;
+    cout << "請輸入國文成績：";
+    cin >> chinese;
+    cout << "請輸入英文成績：";
+    cin >> english;
+    cout << "請輸入數學成績：";
+    cin >> math;
+    cout << "請輸入社會成績：";
+    cin >> social;
+    cout << "請輸入自然成績：";
+    cin >> science;
+    sum = chinese + english + math + social + science;
+    avg = (float)sum / 5;
+    cout.precision(3);
+    cout << "總分：" << sum << "\t\t"
+         << "平均：" << avg << endl;
+    system("pause");
+}
+void f079()
+{
+    int num;
+    int sum = 0;
+    cout << "要計算什麽數的倍數和？";
+    cin >> num;
+    cout << "1~100中，" << num << "的倍數有：";
+    for (int i = 1; i <= 100; i++)
+    {
+        if (num * i <= 100)
+        {
+            cout << num * i << " ";
+            sum += num * i;
+        }
+        else
+        {
+            continue;
+        }
+    }
+    cout << "\n";
+    cout << num << "的倍數和為" << sum << endl;
     system("pause");
 }
