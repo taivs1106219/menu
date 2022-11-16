@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include "f06.cpp"
 #include "f07.cpp"
+#include "f08.cpp"
 using namespace std;
 void f000();
 void f01();
@@ -47,7 +48,7 @@ int main(int argc, char **argv)
 		"[5] 流程指令",
 		"[6] 迴圈指令",
 		"[7]",
-		"[8]",
+		"[8] 期中考",
 		"[9]"};
 	int i, num;
 	int selMenu = 99;
@@ -90,6 +91,9 @@ int main(int argc, char **argv)
 			break;
 		case 7:
 			f07();
+			break;
+		case 8:
+			f08();
 			break;
 		}
 
