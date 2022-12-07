@@ -76,7 +76,7 @@ void f06()
 }
 void f000()
 {
-    cout << "叮~恭喜你觸發了彩蛋" << endl;
+    // cout << "叮~恭喜你觸發了彩蛋" << endl;
     system("pause");
 }
 void f061()

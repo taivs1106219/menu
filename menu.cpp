@@ -12,6 +12,7 @@
 #include "f06.cpp"
 #include "f07.cpp"
 #include "f08.cpp"
+#include "f09.cpp"
 using namespace std;
 void f000();
 void f01();
@@ -34,8 +35,6 @@ void f06();
 // void f062();
 // void f063();
 // void f064();
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char **argv)
 {
@@ -95,6 +94,8 @@ int main(int argc, char **argv)
 		case 8:
 			f08();
 			break;
+		case 9:
+			f09();
 		}
 
 		cout << "\n";

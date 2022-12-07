@@ -1,8 +1,9 @@
 {
-    "files.associations": {
-        "*.js": "javascript",
-        "*.css": "css",
-        "*.sass": "scss",
-        "ostream": "cpp"
-    }
+  "files.associations": {
+    "*.js": "javascript",
+    "*.css": "css",
+    "*.sass": "scss",
+    "ostream": "cpp",
+    "ctime": "cpp"
+  }
 }
