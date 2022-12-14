@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 		"[6] 迴圈指令",
 		"[7]",
 		"[8] 期中考",
-		"[9]"};
+		"[9] 陣列"};
 	int i, num;
 	int selMenu = 99;
 	while (selMenu != 0)
