@@ -33,7 +33,8 @@ void f09()
         "[6] 成績輸入",
         "[7] 威力彩",
         "[8] 魯迪烏斯對戰",
-        "[9]"};
+        "[9]",
+        };
     int i, num;
     int selMenu = 99;
     while (selMenu != 0)

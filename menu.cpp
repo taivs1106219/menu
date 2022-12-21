@@ -13,6 +13,7 @@
 #include "f07.cpp"
 #include "f08.cpp"
 #include "f09.cpp"
+#include "f10.cpp"
 using namespace std;
 void f000();
 void f01();
@@ -48,7 +49,7 @@ int main(int argc, char **argv)
 		"[6] 迴圈指令",
 		"[7]",
 		"[8] 期中考",
-		"[9] 陣列"};
+		"[9] 陣列", "[10] 函式"};
 	int i, num;
 	int selMenu = 99;
 	while (selMenu != 0)
@@ -96,6 +97,10 @@ int main(int argc, char **argv)
 			break;
 		case 9:
 			f09();
+			break;
+		case 10:
+			f10();
+			break;
 		}
 
 		cout << "\n";
