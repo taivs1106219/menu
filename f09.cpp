@@ -25,15 +25,15 @@ void f09()
 {
     string menuItem[] = {
         "[0] 離開",
-        "[91] 駭客任務",
-        "[92] 練習",
-        "[93] 魯迪烏斯",
-        "[94] 生肖",
-        "[95] 星座",
-        "[96] 成績輸入",
-        "[97] 威力彩",
-        "[98] 魯迪烏斯對戰",
-        "[99]"};
+        "[1] 駭客任務",
+        "[2] 練習",
+        "[3] 魯迪烏斯",
+        "[4] 生肖",
+        "[5] 星座",
+        "[6] 成績輸入",
+        "[7] 威力彩",
+        "[8] 魯迪烏斯對戰",
+        "[9]"};
     int i, num;
     int selMenu = 99;
     while (selMenu != 0)
@@ -54,25 +54,25 @@ void f09()
         case 0:
 
             break;
-        case 91:
+        case 1:
             f091();
             break;
-        case 92:
+        case 2:
             f092();
             break;
-        case 93:
+        case 3:
             f093();
             break;
-        case 94:
+        case 4:
             f094();
             break;
-        case 95:
+        case 5:
             f095();
             break;
-        case 96:
+        case 6:
             f096();
             break;
-        case 97:
+        case 7:
             f097();
             break;
         }
@@ -381,13 +381,15 @@ void f097()
 
     int ans[7];
     int win = 0, wins = 0, tmp;
-    for (int i = 0; i < 6; i++)
+    for (int i = 1; i <= 6; i++)
     {
+        
         do
         {
             existing = 0;
-            cout << "請輸入號碼" << i + 1 << "：";
+            cout << "請輸入號碼" << i  << "：";
             cin >> tmp;
+            // cout << tmp;
             for (int j = 0; j < i; j++)
             {
                 if (ans[j] == tmp)
@@ -412,8 +414,15 @@ void f097()
             }
         }
     }
-    cout << "請輸入特別號碼：";
-    cin >> ans[6];
+    do
+    {
+        cout << "請輸入特別號碼：";
+        cin >> ans[6];
+        if (ans[6] < 1 || ans[6] > 8){
+            cout<<"overrange error\n";
+        }
+    } while (ans[6] <1  || ans[6] > 8);
+
     if (ans[6] == lotto[6])
     {
         wins++;
