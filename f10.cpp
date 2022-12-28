@@ -8,16 +8,16 @@
 using namespace std;
 void f1001();
 void f1002();
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+void f1003();
+void f1004();
 
 void f10()
 {
     string menuItem[] = {
-        "[1]f01",
-        "[2]",
-        "[3]",
-        "[4]",
+        "[1] 亂數",
+        "[2] 命運",
+        "[3] 亂數（函式）",
+        "[4] 位數乘機",
         "[5]",
         "[6]",
         "[7]",
@@ -45,6 +45,12 @@ void f10()
             break;
         case 2:
             f1002();
+            break;
+        case 3:
+            f1003();
+            break;
+        case 4:
+            f1004();
             break;
         }
         cout << "\n";
@@ -140,5 +146,97 @@ void f1002()
         cout << destiny[fscore - 1] << endl;
         cout /*<< "生日 "*/ << yyyy << endl;
         cout << sum;
+    }
+}
+void getrnd(int arr[], int min, int max, int num)
+{
+    srand((unsigned)time(NULL));
+    int r = 0;
+    bool pass = 0;
+    for (int i = 0; i <= (num + 1); i++)
+    {
+        do
+        {
+            pass = 1;
+            r = (rand() % (max - min + 1) + min);
+            for (int j = 0; j <= i; j++)
+            {
+                if (arr[j] == r)
+                {
+                    pass = 0;
+                }
+            }
+        } while (!pass);
+        arr[i] = r;
+    }
+
+    int tmp;
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < num; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            }
+        }
+    }
+}
+void f1003()
+{
+    int min, max, rndno;
+    cout << "請輸入連續整數的首項：";
+    cin >> min;
+    cout << "請輸入連續整數的末項：";
+    cin >> max;
+    cout << "請輸入不重複整數的數量：";
+    cin >> rndno;
+    if (min > max)
+    {
+        int tmp = max;
+        max = min;
+        min = tmp;
+    }
+    if (max == rndno)
+    {
+        max += 1;
+    }
+
+    int pk[max - min + 1];
+    getrnd(pk, min, max, rndno);
+    cout << "不重複的整數如下：\n";
+    for (int i = 0; i < rndno; i++)
+    {
+        cout << setw(3) << pk[i] << " ";
+        if (i % 5 == 4)
+        {
+            cout << endl;
+        }
+    }
+    cout << endl;
+}
+int mul(string a)
+{
+    int value = 1;
+
+    for (int j = 0; j < a.length(); j++)
+    {
+        value *= (a[j] - '0');
+    }
+    return value;
+}
+void f1004()
+{
+    int n;
+    string str;
+    cout << "請輸入資料總數：";
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        cout << "輸入第" << i << "筆資料";
+        cin >> str;
+        cout << "乘積為" << mul(str) << endl;
     }
 }
