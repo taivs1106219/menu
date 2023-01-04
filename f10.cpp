@@ -193,15 +193,16 @@ void f1003()
     cin >> max;
     cout << "請輸入不重複整數的數量：";
     cin >> rndno;
-    if (min > max)
-    {
-        int tmp = max;
-        max = min;
-        min = tmp;
-    }
+    // if (min > max)
+    // {
+    //     int tmp = max;
+    //     max = min;
+    //     min = tmp;
+    // }
     if (max == rndno)
     {
         max += 1;
+        cout << max;
     }
 
     int pk[max - min + 1];
